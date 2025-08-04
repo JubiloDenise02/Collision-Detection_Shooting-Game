@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style1.css">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <title>SHOOT That BATS!</title>
+
+    <style>
+        html{
+            cursor: url('img/cursor.png'), auto;
+       }
+    </style>
+</head>
+<body>    
+    <canvas id="canvas1"></canvas>
+    <canvas id="collisioncanvas1"></canvas>
+    <div id="score">SCORE: 0</div>
+
+    <div id="container">
+        <div id='gameover'>
+            <div id="endcontainer">
+                <div id="end">GAME OVER</div>
+                <h1 id="finalScore"></h1>
+                <form>
+                    <button class="btn btn1" onClick="window.location.reload()">RESTART</button>
+                    <a class="btn btn1" onClick="window.location.assign('index.html')">HOME</a>
+                </form>
+            </div>
+        </div>
+    <script src="script1.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;800&family=Oswald:wght@200;300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&family=VT323&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+    font-family: 'VT323', monospace;
+}
+
+body {
+    background-color: rgb(68, 67, 67);
+    background-image: url(img/backgorund.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    overflow: hidden;
+}
+
+#container{
+    color: rgb(131, 212, 183);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+span{
+    color: #00ffff;
+}
+
+#main {
+    position: absolute;
+    background-color: black;
+    border: 3px solid;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    display: grid;
+    place-items: center;
+    opacity: 0.7;
+}
+
+#title{
+    font-size: 80px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.btn{
+    color: rgb(234, 243, 244);
+    font-size: 40px;
+    position: relative;
+    background: none;
+    border: 3px solid rgb(14, 149, 149);
+    font-family: 'VT323', monospace; 
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    padding: 12px 15px;
+    min-width: 200px;
+    margin-bottom: 20px;
+    cursor: url('img/cursor.png'), auto;
+    transition: color 0.4s linear;
+}
+
+.btn:hover{
+    color: rgb(4, 72, 56);
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(40, 186, 186);
+    z-index: -1;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
+}
+
+.btn1::before{
+    transform: scaleX(0);
+}
+
+.btn1:hover::before{
+    transform: scaleX(1);
+}

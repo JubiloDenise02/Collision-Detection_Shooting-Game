@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;800&family=Oswald:wght@200;300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&family=VT323&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+    color: rgb(255, 255, 255);
+    font-family: 'VT323', monospace;
+}
+
+body {
+    overflow: hidden;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#canvas1 {
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+#collisioncanvas1{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+#score {
+    color: black;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    top: 20px;
+    left: 30px;
+    position: absolute;
+    width: fit-content;
+    height: 10px;
+}
+
+#container {
+    background-color: rgb(199, 85, 85);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    opacity: 0.8;
+}
+
+#gameover {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    display: grid;
+    place-items: center;
+}
+
+#end{
+    font-size: 100px;
+    margin-bottom: 10px;
+}
+
+#finalScore {
+    font-size: 150px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.btn{
+    color: rgb(247, 247, 247);
+    font-size: 40px;
+    position: relative;
+    background: none;
+    border: 3px solid rgb(15, 35, 35);
+    font-family: 'VT323', monospace; 
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    padding: 12px 15px;
+    min-width: 200px;
+    margin: 5px;
+    cursor: url('img/cursor.png'), auto;
+    transition: color 0.4s linear;
+}
+
+.btn:hover{
+    color: rgb(7, 153, 153);
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(18, 45, 45);
+    z-index: -1;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
+}
+
+.btn1::before{
+    transform: scaleX(0);
+}
+
+.btn1:hover::before{
+    transform: scaleX(1);
+}
+
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a{
+    text-align: center;
+}
